@@ -1,8 +1,12 @@
-# 베이스 이미지를 Ubuntu로 설정
+# 베이스 이미지
 FROM ubuntu:20.04
+
+# 환경 변수 설정
+ENV DEBIAN_FRONTEND=noninteractive
 
 # 필수 패키지 설치
 RUN apt-get update && apt-get install -y \
+    tzdata \
     cmake \
     g++ \
     make \
